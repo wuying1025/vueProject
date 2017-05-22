@@ -1,15 +1,24 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+import Movie from '@/components/Movie'
+import MovieTop250 from '@/components/movie/Movie-Top250'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+   	{ 
+   		path: '/', 
+   		redirect: '/movie/top250'
+   	},
     {
-      path: '/',
-      name: 'Hello',
-      component: Hello
+      path: '/movie',
+      name: 'Movie',
+      component: Movie,
+      children: [  
+            { path: "/movie/top250", component: MovieTop250 }  
+        ] 
+
     }
   ]
 })
