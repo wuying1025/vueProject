@@ -12,11 +12,17 @@ const state = {
 }
 //定义动作
 const mutations = {
-
+   changeShow(state,status){
+   	state.show = status;
+   },
+   changeLogined(state,status){
+   	state.logined = status;
+   }
 }
 
 const actions = {
-
+	changeShow:({commit},status)=>commit('changeShow',status),
+	changeLogined:({commit},status)=>commit('changeLogined',status)
 }
 
 const getters = {
