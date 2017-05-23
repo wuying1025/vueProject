@@ -1,21 +1,20 @@
 <template>
-	<div class='movie-nav'>
+	<div class='movie-nav' :style="{background:$store.state.bgcolor}">
 		<ul>
-			<li><router-link name='aa' :to="'/movie/top250'">top250</router-link></li>
-			<li><router-link :to="'/movie/hot'">正在热映</router-link></li>
-			<li><router-link :to="'/movie/coming'">即将上映</router-link></li>
+			<li><router-link to="/movie/top250">top250</router-link></li>
+			<li><router-link to="/movie/hot">正在热映</router-link></li>
+			<li><router-link to="/movie/coming">即将上映</router-link></li>
 		</ul>
 	</div>
 </template>
 <script>
-	
+
 </script>
 <style>
 @import '../../assets/css/reset.css';
 
 	.movie-nav{
 		height: 48px;
-		background: #2196f3;
 		color:#ccc;
 		position: fixed;
 	    top:64px;
@@ -39,5 +38,5 @@
 		color: #fff;
 	}
 
-	
+
 </style>

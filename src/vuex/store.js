@@ -6,23 +6,22 @@ Vue.use(Vuex)
 
 //定义初始化变量
 const state = {
-   title:'moive',
-   show:false,
-   logined:false
+    title:'moive',
+    bgcolor:'#2196f3'
 }
 //定义动作
 const mutations = {
-   changeShow(state,status){
-   	state.show = status;
+  changeTitle(state,status){
+   	state.title = status;
    },
-   changeLogined(state,status){
-   	state.logined = status;
-   }
+  changeBgColor(state,status){
+    state.bgcolor = status;
+  }
 }
 
 const actions = {
-	changeShow:({commit},status)=>commit('changeShow',status),
-	changeLogined:({commit},status)=>commit('changeLogined',status)
+  changeTitle:({commit},status)=>commit('changeTitle',status),
+  changeBgColor:({commit},status)=>commit('changeBgColor',status)
 }
 
 const getters = {

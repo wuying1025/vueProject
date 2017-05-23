@@ -16,10 +16,10 @@ import Axios from 'axios'
 
 export default {
   data() {
-	return {
-		isScrollDown: false,
-		movieLists: [],
-	};
+    return {
+      isScrollDown: false,
+      movieLists: [],
+    };
   },
   mounted: function(){
  	Axios.get(API_PROXY+'https://api.douban.com/v2/movie/top250?count=10&start=0')

@@ -1,5 +1,5 @@
 <template>
-	<div id="header">
+	<div id="header" :style="{background:$store.state.bgcolor}">
 		<button>a</button>
 		<h2>{{$store.state.title}}</h2>
 		<button>b</button>
@@ -18,7 +18,6 @@
 		height: 64px;
 		display:flex;
 		align-items:center;
-		background: #2196f3;
 		color: #fff;
 	    width: 100%;
 	    position: fixed;
@@ -33,5 +32,5 @@
 		height: 40px;
 		color: #fff;
 	}
-	
+
 </style>
